@@ -18,7 +18,7 @@ dotenv.config()
 function createWindow() {
   // Create the browser window.
   win = new BrowserWindow({ width: 400, height: 700 })
-  win.setMenu(null)
+  // win.setMenu(null)
 
   if (env.NODE_ENV === 'development') {
     win.webContents.openDevTools()
@@ -70,10 +70,6 @@ function createWindow() {
     })
 
     autoUpdater.checkForUpdates()
-  })
-
-  ipcMain.on("setting", (event) => {
-    win.loadURL(`file://${__dirname}/src/page/setting/setting.html`)
   })
 
   // Open the DevTools.

@@ -2,26 +2,154 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />  
+    <title>PortalBot</title>
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/font-awesome.min.css">
+    <link href="../../../assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
     <script>window.$ = window.jQuery = require("../../../assets/js/jquery-3.2.1.min.js")</script>
   </head>
-  <body>
-    <button type="button" id="logout">Logout</button>
-    <button type="button" id="setting">Setting</button>
-
-    
-    <script>
-      const { ipcRenderer } = require('electron')
-
-      ipcRenderer.on('error', (_, ...args) => console.error(...args))
-      ipcRenderer.on('log', (_, ...args) => console.log(...args))
-
-      $('#logout').click(function(){
-        ipcRenderer.send("unauthenticated")
-      })
-      $('#setting').click(function(){
-        ipcRenderer.send("setting")
-      })
-    </script>
+  <body class="dark-edition">
+    <div class="wrapper">
+      <div class="sidebar">
+        <div class="logo">
+          <img src="../../../assets/img/portalbot.png" width="180" height="100">
+        </div>
+        <div class="sidebar-wrapper">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="material-icons">dashboard</i>
+                <p>Dashboard</p>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#">
+                <i class="material-icons">chat</i>
+                <p>Live Chart</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="material-icons">data_usage</i>
+                <p>Sentiment Data</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="material-icons">history</i>
+                <p>Trade History</p>
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">
+                <i class="material-icons">settings</i>
+                <p>Settings</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="logout">
+                <i class="material-icons">power_settings_new</i>
+                <p>Logout</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="main-panel">
+        <ul class="nav nav-tabs nav-justified md-tabs indigo" id="myTabJust" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="account-tab" data-toggle="tab" href="#account" role="tab" aria-controls="account"
+              aria-selected="true">Account Info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="exchange-tab" data-toggle="tab" href="#exchange" role="tab" aria-controls="exchange"
+              aria-selected="false">Exchange APIs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="telegram-tab" data-toggle="tab" href="#telegram" role="tab" aria-controls="telegram"
+              aria-selected="false">Telegram Integration</a>
+          </li>
+        </ul>
+        <div class="tab-content pt-5" id="myTabContentJust">
+          <div class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="account-tab">
+            <img class="tab-logo" src="../../../assets/img/portalbot.png" width="160" height="100" style="margin-bottom: 20px;">
+            <div class="form-group">
+              <label class="bmd-label-floating">Username</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label class="bmd-label-floating">Email address</label>
+              <input type="email" class="form-control">
+            </div>
+            <div class="form-group">
+              <label class="bmd-label-floating">Password</label>
+              <input type="password" class="form-control">
+            </div>
+            <div>
+              <btn class="btn form-btn" style="background-color: #2b8efa;">Save</btn>
+              <btn class="btn form-btn" style="background-color: palevioletred;margin-left: 40px;">Remove</btn>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="exchange" role="tabpanel" aria-labelledby="exchange-tab">
+            <img class="tab-logo" id="logo_bitmex" src="../../../assets/img/bitmex.png" width="200" height="100">
+            <img class="tab-logo" id="logo_binance" src="../../../assets/img/binance.png" width="200" height="130" style="display: none;margin-top: -30px;">
+            <img class="tab-logo" id="logo_testnet" src="../../../assets/img/testnet.png" width="200" height="32" style="display: none;margin: 33px">
+            <div class="form-group">
+              <select id="exchange_selector">
+                <option value="Bitmex">Bitmex</option>
+                <option value="Binance">Binance</option>
+                <option value="Testnet">Testnet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="bmd-label-floating">Instance Name</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label class="bmd-label-floating">API Key</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label class="bmd-label-floating">API Secret</label>
+              <input type="text" class="form-control">
+            </div>
+            <!-- <div class="form-group">
+              <button class="btn btn-info btn-circle" style="margin-top: 30px;"><i class="fa fa-plus"></i></button>
+            </div> -->
+            <div>
+              <btn class="btn form-btn" style="background-color: #2b8efa;">Save</btn>
+              <btn class="btn form-btn" style="background-color: palevioletred;margin-left: 40px;">Remove</btn>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="telegram" role="tabpanel" aria-labelledby="telegram-tab">
+            <img class="tab-logo" src="../../../assets/img/telegram.png" width="60" height="60" style="margin-bottom: 60px;margin-top: 20px;">
+            <div class="form-group">
+              <label class="bmd-label-floating">API Key</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label class="bmd-label-floating">Confirm Code</label>
+              <input type="number" class="form-control">
+            </div>
+            <div>
+              <btn class="btn form-btn" style="background-color: #2b8efa;">Save</btn>
+              <btn class="btn form-btn" style="background-color: palevioletred;margin-left: 40px;">Remove</btn>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
+
+  <script src="../../../assets/js/jquery.min.js"></script>
+  <script src="../../../assets/js/popper.min.js"></script>
+  <script src="../../../assets/js/bootstrap-material-design.min.js"></script>
+  <script src="../../../assets/js/material-dashboard.js?v=2.1.0"></script>
+  <script src="dashboard.js"></script>
 </html>
