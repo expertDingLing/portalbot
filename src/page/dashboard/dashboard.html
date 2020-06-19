@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <script>window.$ = window.jQuery = require("../../../assets/js/jquery-3.2.1.min.js")</script>
+  </head>
+  <body>
+    <button type="button" id="logout">Logout</button>
+    <button type="button" id="setting">Setting</button>
+
+    
+    <script>
+      const { ipcRenderer } = require('electron')
+
+      ipcRenderer.on('error', (_, ...args) => console.error(...args))
+      ipcRenderer.on('log', (_, ...args) => console.log(...args))
+
+      $('#logout').click(function(){
+        ipcRenderer.send("unauthenticated")
+      })
+      $('#setting').click(function(){
+        ipcRenderer.send("setting")
+      })
+    </script>
+  </body>
+</html>

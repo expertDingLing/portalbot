@@ -1,0 +1,37 @@
+{
+  "name": "portalbot",
+  "version": "1.0.0",
+  "description": "Electron Application Portalbot",
+  "main": "main.js",
+  "build": {
+    "appId": "org.keygen.demo",
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "type": "distribution"
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "repository": "https://github.com/keygen-sh/example-electron-app",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "~1.6.2",
+    "electron-builder": "^19.33.0"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "electron-store": "^1.3.0",
+    "node-fetch": "^1.7.3"
+  }
+}
