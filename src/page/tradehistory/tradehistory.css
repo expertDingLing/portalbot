@@ -1,0 +1,47 @@
+.main-panel .content {
+  margin-top: 0px;
+}
+.main-panel .content .card {
+  margin-top: 10px;
+  height: 620px;
+  overflow: scroll;
+}
+.card-header {
+  border-bottom: 1px solid grey !important;
+  text-align: center;
+}
+.main-panel .content .card::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.main-panel .content .card::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.main-panel .content .card::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 20px; 
+}
+.title-history {
+  line-height:56px;
+}
+.padding-top-0 {
+  padding-top:0 !important;
+}
+.dropdown {
+  z-index: 10000;
+}
+.short-color {
+  color:#f94144 !important;
+}
+.symbol-color {
+  color:#00a8e8 !important;
+}
+.table-responsive {
+  width: 1000px;
+}
+@media screen and (min-width:1300px) {
+  .table-responsive {
+    width: 100%;
+  }
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />  
+    <title>PortalBot</title>
+    <!-- <link href="../../../assets/demo/demo.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/components-rounded.css">
+    <link href="../../../assets/css/material-dashboard.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="setting.css">
+    <script>window.$ = window.jQuery = require("../../../assets/js/core/jquery.min.js")</script>
+  </head>
+  <body class="dark-edition">
+    <div class="wrapper">
+      <div class="sidebar">
+        <div class="logo">
+          <img src="../../../assets/img/portalbot.png" width="180" height="100">
+        </div>
+        <div class="sidebar-wrapper">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="dashboard">
+                <i class="material-icons">dashboard</i>
+                <p>Dashboard</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="live-chart">
+                <i class="material-icons">chat</i>
+                <p>Live Chart</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="sentiment-data">
+                <i class="material-icons">data_usage</i>
+                <p>Sentiment Data</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="trade-history">
+                <i class="material-icons">history</i>
+                <p>Trade History</p>
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#" id="setting">
+                <i class="material-icons">settings</i>
+                <p>Settings</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="logout">
+                <i class="material-icons">power_settings_new</i>
+                <p>Logout</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-panel">
+        <ul class="nav nav-tabs nav-justified md-tabs indigo" id="myTabJust" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="account-tab" data-toggle="tab" href="#account" role="tab" aria-controls="account"
+              aria-selected="true">Account Info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="exchange-tab" data-toggle="tab" href="#exchange" role="tab" aria-controls="exchange"
+              aria-selected="false">Exchange APIs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="telegram-tab" data-toggle="tab" href="#telegram" role="tab" aria-controls="telegram"
+              aria-selected="false">Telegram Integration</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="misc-tab" data-toggle="tab" href="#misc" role="tab" aria-controls="misc"
+              aria-selected="false">Misc</a>
+          </li>
+        </ul>
+        <div class="tab-content pt-5" id="myTabContentJust">
+          <div class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="account-tab">
+            <img class="tab-logo" src="../../../assets/img/portalbot.png" width="160" height="100" style="margin-bottom: 20px;">
+            <div class="form-group">
+              <label class="bmd-label-floating">Username</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label class="bmd-label-floating">Email address</label>
+              <input type="email" class="form-control">
+            </div>
+            <div class="form-group">
+              <label class="bmd-label-floating">Password</label>
+              <input type="password" class="form-control">
+            </div>
+            <div>
+              <btn class="btn form-btn btn-save">Save</btn>
+              <btn class="btn form-btn btn-remove" style="margin-left: 40px;">Remove</btn>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="exchange" role="tabpanel" aria-labelledby="exchange-tab">
+            <img class="tab-logo" id="logo_bitmex" src="../../../assets/img/bitmex.png" width="200" height="100">
+            <img class="tab-logo" id="logo_binance" src="../../../assets/img/binance.png" width="200" height="130" style="display: none;margin-top: -30px;">
+            <img class="tab-logo" id="logo_testnet" src="../../../assets/img/testnet.png" width="200" height="32" style="display: none;margin: 33px">
+            <div class="form-group">
+              <select id="exchange_selector">
+                <option value="Bitmex">BitMEX</option>
+                <option value="Binance">Binance</option>
+                <option value="Testnet">BitMEX Testnet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="bmd-label-floating">Instance Name</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label class="bmd-label-floating">API Key</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label class="bmd-label-floating">API Secret</label>
+              <input type="password" class="form-control">
+            </div>
+            <div>
+              <btn class="btn form-btn btn-save">Save</btn>
+              <btn class="btn form-btn btn-remove" style="margin-left: 40px;">Remove</btn>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="telegram" role="tabpanel" aria-labelledby="telegram-tab">
+            <img class="tab-logo" src="../../../assets/img/telegram.png" width="60" height="60" style="margin-bottom: 60px;margin-top: 20px;">
+            <div class="form-group">
+              <label class="bmd-label-floating">API Key</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label class="bmd-label-floating">User ID</label>
+              <input type="number" class="form-control">
+            </div>
+            <div>
+              <btn class="btn form-btn btn-save">Save</btn>
+              <btn class="btn form-btn btn-remove" style="margin-left: 40px;">Remove</btn>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="misc" role="tabpanel" aria-labelledby="misc-tab">
+            <div class="main-panel-part">
+              <div class="main-panel-part-title">
+                <h3>Auto Trader Injector Module</h3>
+              </div>
+              <div class="main-panel-part-content container">
+                <form class="width100">
+                  <div class="row align-items-center">
+                    <label class="col-md-4 custom-label">EMA Defaults</label>
+                    <div class="col-md-8 d-flex">
+                      <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                          Pairs
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">XBTUSD</a>
+                          <a class="dropdown-item" href="#">ETHUSD</a>
+                          <a class="dropdown-item" href="#">XRPUSD</a>
+                        </div>
+                      </div>
+                      <div class="p-10">
+                        <input type="number" name="quantity" min="1" max="200" placeholder="1" class="form-control input-circle">
+                      </div>
+                      <div class="p-10">
+                        <input type="number" name="quantity" min="1" max="200" placeholder="1" class="form-control input-circle">
+                      </div>
+                      <div class="p-10">
+                        <input type="number" name="quantity" min="1" max="200" placeholder="1" class="form-control input-circle">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row align-items-center">
+                    <label class="col-md-4 custom-label">Stop Loss Percentage Defaults</label>
+                    <div class="col-md-8 d-flex">
+                      <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                          Pairs
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">XBTUSD</a>
+                          <a class="dropdown-item" href="#">ETHUSD</a>
+                          <a class="dropdown-item" href="#">XRPUSD</a>
+                        </div>
+                      </div>
+                      <div class="p-10">
+                        <input type="number" name="quantity" min="1" max="20" placeholder="1" class="form-control input-circle">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row align-items-center">
+                    <label class="col-md-4 custom-label">Leverate Defaults</label>
+                    <div class="col-md-8 d-flex">
+                      <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                          Pairs
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">XBTUSD</a>
+                          <a class="dropdown-item" href="#">ETHUSD</a>
+                          <a class="dropdown-item" href="#">XRPUSD</a>
+                        </div>
+                      </div>
+                      <div class="p-10">
+                        <input type="number" name="quantity" min="1" max="25" placeholder="1" class="form-control input-circle">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row align-items-center">
+                    <label class="col-md-4 custom-label">Risk Defaults</label>
+                    <div class="col-md-8 min-flex">
+                      <div class="row p-10 align-items-center">
+                        <label class="col-md-6 custom-label">XBTUSD</label>
+                        <div class="col-md-2"><input type="number" name="quantity" min="0.5" max="5" placeholder="0.5" step="0.5"  class="form-control input-circle" ></div>
+                      </div>
+                      <div class="row p-10 align-items-center">
+                        <label class="col-md-6 custom-label">ETHUSD</label>
+                        <div class="col-md-2"><input type="number" name="quantity" min="0.5" max="5" placeholder="0.5"  step="0.5" class="form-control input-circle"></div>
+                      </div>
+                      <div class="row p-10 align-items-center">
+                        <label class="col-md-6 custom-label">ALL OTHERS</label>
+                        <div class="col-md-2"><input type="number" name="quantity" min="0.5" max="5" placeholder="0.5"  step="0.5" class="form-control input-circle"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <btn class="btn form-btn btn-save">Save</btn>
+                </form>
+              </div>
+            </div>
+            <div class="main-panel-part">
+              <div class="main-panel-part-title">
+                <h3>Database Wipe</h3>
+              </div>
+              <div class="main-panel-part-content">
+                <btn class="btn form-btn btn-remove">Reset</btn>  
+                <div class="warning-title">
+                  <h6>Warning:Erasing the database will erase all your trade history</h6>
+                </div>
+              </div>
+            </div>
+            <div class="main-panel-part">
+              <div class="main-panel-part-title">
+                <h3>Sound On/Off</h3>
+              </div>
+              <div class="main-panel-part-content">
+                <div>
+                  <label class="switch">
+                      <input type="checkbox" name="participation" value="on" checked>
+                      <span class="slider round"></span>
+                    </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="../../../assets/js/core/jquery.min.js"></script>
+  <script src="../../../assets/js/core/popper.min.js"></script>
+  <!-- <script src="../../../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script> -->
+  <script src="../../../assets/js/bootstrap-material-design.min.js"></script>
+  <script src="../../../assets/js/material-dashboard.js?v=2.1.0"></script>
+  <!-- <script src="../../../assets/demo/demo.js"></script>  -->
+
+  <script src="./setting.js"></script> 
+  <script src="../../route.js"></script>
+</html>

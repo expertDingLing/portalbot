@@ -1,0 +1,160 @@
+.main-panel .content {
+  margin-top: -10px;
+}
+.card .nav li {
+  height:30px;
+}
+.card .nav .active {
+  background:none !important;
+}
+.card .nav li a {
+  padding: 7px 24px;
+  height: 30px;
+  line-height: 17px;
+  margin-right: 4px;
+  font-size:16px;
+  text-decoration:none;
+  display: inline-block;
+  cursor:pointer;
+}
+.card .nav li a:hover {
+  color:#fff;
+  text-decoration:none;
+}
+.card .nav li a.active {
+  background: purple !important;
+}
+#menu1, #sub_list{
+  background-color: #2d3142 !important;
+  font-family: Roboto-Regular;
+}
+#sub_list>li>a{
+  font-size: 12px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+#sub_list>li>a>.fa{
+  margin-right: 10px;
+}
+.mini-sub-pro{
+  color: #00a8e8;
+}
+.online{
+  color: #80b918;
+}
+.sub-left{
+  height: 885px;
+  color:#fff;
+}
+.content_ctrl{
+  border-top: 2px solid black;
+  padding-top: 20px;
+}
+.first_border, .second_border, .third_border{
+  border-right: 1px solid black;
+}
+.second_row{
+  margin-top: 10px;
+}
+.content_ctrl>p{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.btn_part{
+  padding: 0px;
+}
+.btn-default{
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 30px;
+  font-size: 12px;
+}
+.content_ctrl>.row a{
+  font-size: 12px;
+}
+.chart_content{
+  margin: 0px;
+}
+
+.chart-left-menu-std{
+  top:0px;
+}
+.product-sales-chart, .charts-single-pro{
+  padding:20px;
+  background:#1b2a47;
+}
+.flot-chart {
+  height: 319px;
+}
+.flot-chart.flot-chart-sts{
+  height: 308px;
+}
+.flot-chart-sts {
+  width: calc(100% + 16px);
+  left: -10px;
+  bottom: -10px;
+}
+.flot-chart-sts.flot-chart.curved-chart-statistic{
+  height: 432px;
+}
+.flot-chart.flot-chart-sts.line-chart-statistic{
+  height: 362px;
+}
+.chart_body{
+  width:75%;
+  height: 100%;
+}
+.main-panel .nav{
+  background: transparent;
+}
+.nav-tabs{
+  border: none;
+}
+.tabbable-tabdrop{
+  margin-top: -17px;
+  margin-bottom: 0px;
+}
+#curved-line-chart{
+  height: 60%;
+}
+.left-sidebar-menu-pro {
+  max-height:500px;
+}
+.tab-content{
+  margin-top: 0px;
+  max-height:150px;
+  position:relative;
+}
+.positive_num{
+  color: #80b918;
+}
+.negative_num{
+  color: #e71d36;
+}
+.padding-0-30 {
+  padding: 0 0 0 10px;
+}
+.pair-color {
+  color: #00a8e8 !important;
+}
+.short-color {
+  color: #f94144 !important;
+}
+.justify-content-space-around{
+  justify-content: space-around;
+}
+.btn-start, .btn-stop {
+  background-color: #7400b8 !important;
+  border-color: #7400b8 !important;
+}
+.table td, .table th {
+  padding: 4px 8px !important;
+}
+.table {
+  width: 820px;
+}
+@media screen and (min-width:1500px) {
+  .table {
+    width: 100%;
+  }
+}

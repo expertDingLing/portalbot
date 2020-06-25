@@ -1,0 +1,28 @@
+.dark-edition .card-title.color-1 {
+    color:#e71d36;
+}
+.dark-edition .card-title.color-2 {
+    color:#ff9f1c;
+}
+.dark-edition .card-title.color-3 {
+    color:#f94144;
+}
+.percent-color {
+    color:#ef476f;
+}
+.card-header {
+    border-bottom: 1px solid grey !important;
+    text-align: center;
+}
+.card-chart {
+    padding: 0;
+}
+
+h3 {
+    text-align: center;
+    margin-top: -40px;
+}
+.card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

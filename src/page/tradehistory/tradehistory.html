@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />  
+    <title>PortalBot</title>
+    <link href="../../../assets/css/material-dashboard.css" rel="stylesheet" />
+    <link href="../../../assets/demo/demo.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="tradehistory.css">
+    <script>window.$ = window.jQuery = require("../../../assets/js/core/jquery.min.js")</script>
+  </head>
+  <body class="dark-edition">
+    <div class="wrapper ">
+      <div class="sidebar">
+        <div class="logo">
+          <img src="../../../assets/img/portalbot.png" width="180" height="100">
+        </div>
+        <div class="sidebar-wrapper">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="dashboard">
+                <i class="material-icons">dashboard</i>
+                <p>Dashboard</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="live-chart">
+                <i class="material-icons">chat</i>
+                <p>Live Chart</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="sentiment-data">
+                <i class="material-icons">data_usage</i>
+                <p>Sentiment Data</p>
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#" id="trade-history">
+                <i class="material-icons">history</i>
+                <p>Trade History</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="setting">
+                <i class="material-icons">settings</i>
+                <p>Settings</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="logout">
+                <i class="material-icons">power_settings_new</i>
+                <p>Logout</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-panel">
+        <div class="content">
+          <div class="dropdown ">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" style="text-transform: capitalize;">
+              BitMEX
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">BitMEX</a>
+              <a class="dropdown-item" href="#">Binance</a>
+              <a class="dropdown-item" href="#">BitMEX Testnet</a>
+            </div>
+        </div>
+        <div class="card ">
+          <div class="card-header">
+            <h4 class="card-title title-history">Trade History</h4>
+          </div>
+          <div class="card-body padding-top-0">
+            <div class="table-responsive">
+              <table class="table tablesorter">
+                <thead class="text-primary">
+                  <tr>
+                    <th>
+                      TimeStamp
+                    </th>
+                    <th>
+                      OrderID
+                    </th>
+                    <th>
+                      Symbol
+                    </th>
+                    <th class="text-center">
+                      Side
+                    </th>
+                    <th>
+                      OrderType
+                    </th>
+                    <th>
+                      OrderStatus
+                    </th>
+                    <th>
+                      Description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      01-01-2020
+                    </td>
+                    <td>
+                      ae9da18d-46e2-c62e-2eO5-1bdf867075cc
+                    </td>
+                    <td class="symbol-color">
+                      XBTUSD
+                    </td>
+                    <td class="text-center short-color">
+                      SHORT
+                    </td>
+                    <td>
+                      Limit
+                    </td>
+                    <td>
+                      Filled
+                    </td>
+                    <td>
+                      Submission for bitmex.com
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      01-01-2020
+                    </td>
+                    <td>
+                      ae9da18d-46e2-c62e-2eO5-1bdf867075cc
+                    </td>
+                    <td class="symbol-color">
+                      XBTUSD
+                    </td>
+                    <td class="text-center short-color">
+                      SHORT
+                    </td>
+                    <td>
+                      Limit
+                    </td>
+                    <td>
+                      Filled
+                    </td>
+                    <td>
+                      Submission for bitmex.com
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      01-01-2020
+                    </td>
+                    <td>
+                      ae9da18d-46e2-c62e-2eO5-1bdf867075cc
+                    </td>
+                    <td class="symbol-color">
+                      XBTUSD
+                    </td>
+                    <td class="text-center short-color">
+                      SHORT
+                    </td>
+                    <td>
+                      Limit
+                    </td>
+                    <td>
+                      Filled
+                    </td>
+                    <td>
+                      Submission for bitmex.com
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      01-01-2020
+                    </td>
+                    <td>
+                      ae9da18d-46e2-c62e-2eO5-1bdf867075cc
+                    </td>
+                    <td class="symbol-color">
+                      XBTUSD
+                    </td>
+                    <td class="text-center short-color">
+                      SHORT
+                    </td>
+                    <td>
+                      Limit
+                    </td>
+                    <td>
+                      Filled
+                    </td>
+                    <td>
+                      Submission for bitmex.com
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      01-01-2020
+                    </td>
+                    <td>
+                      ae9da18d-46e2-c62e-2eO5-1bdf867075cc
+                    </td>
+                    <td class="symbol-color">
+                      XBTUSD
+                    </td>
+                    <td class="text-center short-color">
+                      SHORT
+                    </td>
+                    <td>
+                      Limit
+                    </td>
+                    <td>
+                      Filled
+                    </td>
+                    <td>
+                      Submission for bitmex.com
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      01-01-2020
+                    </td>
+                    <td>
+                      ae9da18d-46e2-c62e-2eO5-1bdf867075cc
+                    </td>
+                    <td class="symbol-color">
+                      XBTUSD
+                    </td>
+                    <td class="text-center short-color">
+                      SHORT
+                    </td>
+                    <td>
+                      Limit
+                    </td>
+                    <td>
+                      Filled
+                    </td>
+                    <td>
+                      Submission for bitmex.com
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      01-01-2020
+                    </td>
+                    <td>
+                      ae9da18d-46e2-c62e-2eO5-1bdf867075cc
+                    </td>
+                    <td class="symbol-color">
+                      XBTUSD
+                    </td>
+                    <td class="text-center short-color">
+                      SHORT
+                    </td>
+                    <td>
+                      Limit
+                    </td>
+                    <td>
+                      Filled
+                    </td>
+                    <td>
+                      Submission for bitmex.com
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      01-01-2020
+                    </td>
+                    <td>
+                      ae9da18d-46e2-c62e-2eO5-1bdf867075cc
+                    </td>
+                    <td class="symbol-color">
+                      XBTUSD
+                    </td>
+                    <td class="text-center short-color">
+                      SHORT
+                    </td>
+                    <td>
+                      Limit
+                    </td>
+                    <td>
+                      Filled
+                    </td>
+                    <td>
+                      Submission for bitmex.com
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      01-01-2020
+                    </td>
+                    <td>
+                      ae9da18d-46e2-c62e-2eO5-1bdf867075cc
+                    </td>
+                    <td class="symbol-color">
+                      XBTUSD
+                    </td>
+                    <td class="text-center short-color">
+                      SHORT
+                    </td>
+                    <td>
+                      Limit
+                    </td>
+                    <td>
+                      Filled
+                    </td>
+                    <td>
+                      Submission for bitmex.com
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      01-01-2020
+                    </td>
+                    <td>
+                      ae9da18d-46e2-c62e-2eO5-1bdf867075cc
+                    </td>
+                    <td class="symbol-color">
+                      XBTUSD
+                    </td>
+                    <td class="text-center short-color">
+                      SHORT
+                    </td>
+                    <td>
+                      Limit
+                    </td>
+                    <td>
+                      Filled
+                    </td>
+                    <td>
+                      Submission for bitmex.com
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      01-01-2020
+                    </td>
+                    <td>
+                      ae9da18d-46e2-c62e-2eO5-1bdf867075cc
+                    </td>
+                    <td class="symbol-color">
+                      XBTUSD
+                    </td>
+                    <td class="text-center short-color">
+                      SHORT
+                    </td>
+                    <td>
+                      Limit
+                    </td>
+                    <td>
+                      Filled
+                    </td>
+                    <td>
+                      Submission for bitmex.com
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>   
+    <script src="../../../assets/js/core/jquery.min.js"></script>
+    <script src="../../../assets/js/core/popper.min.js"></script>
+    <script src="../../../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../../../assets/js/bootstrap-material-design.min.js"></script>
+    <script src="../../../assets/js/material-dashboard.js"></script>
+    <script src="../../../assets/demo/demo.js"></script> 
+
+    <script src="../../route.js"></script>
+  </body>
+</html>
