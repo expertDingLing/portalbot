@@ -4,7 +4,6 @@ const url = require("url")
 const dotenv = require("dotenv")
 
 const { platform, env } = process
-
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win
@@ -31,7 +30,42 @@ function createWindow() {
   ipcMain.on("unauthenticated", (event) => {
     win.loadURL(`file://${__dirname}/src/page/login/login.html`)
     // win.unmaximize()
-    win.setSize(400,700)
+    win.setSize(400, 700)
+    win.center()
+  })
+
+  ipcMain.on("setting", (event) => {
+    win.loadURL(`file://${__dirname}/src/page/setting/setting.html`)
+    // win.unmaximize()
+    win.setSize(1400, 1000)
+    win.center()
+  })
+
+  ipcMain.on("dashboard", (event) => {
+    win.loadURL(`file://${__dirname}/src/page/dashboard/dashboard.html`)
+    // win.unmaximize()
+    win.setSize(1400, 1000)
+    win.center()
+  })
+
+  ipcMain.on("sentiment-data", (event) => {
+    win.loadURL(`file://${__dirname}/src/page/sentiment/sentiment.html`)
+    // win.unmaximize()
+    win.setSize(1400, 1000)
+    win.center()
+  })
+
+  ipcMain.on("trade-history", (event) => {
+    win.loadURL(`file://${__dirname}/src/page/tradehistory/tradehistory.html`)
+    // win.unmaximize()
+    win.setSize(1400, 1000)
+    win.center()
+  })
+
+  ipcMain.on("live-chart", (event) => {
+    win.loadURL(`file://${__dirname}/src/page/livechart/livechart.html`)
+    // win.unmaximize()
+    win.setSize(1400, 1000)
     win.center()
   })
 
@@ -39,7 +73,7 @@ function createWindow() {
   ipcMain.on("authenticated", async event => {
     win.loadURL(`file://${__dirname}/src/page/dashboard/dashboard.html`)
     // win.maximize()
-    win.setSize(1000,750)
+    win.setSize(1400, 1000)
     win.center()
 
 

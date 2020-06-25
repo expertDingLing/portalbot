@@ -67,10 +67,9 @@
           </ul>
           <div class="sidebar-header text-center" style="margin-top: 50%;">
             <img src="../../../assets/img/scanner.gif" width="100" height="100"></img>
-            <p>Market Scanner:<span class="online">ONLINE</span></p>
+            <p> Market Scanner:<span class="online"> ONLINE</span></p>
+          </div>
         </div>
-        </div>
-        
       </div>
       <div class="main-panel">      
         <div class="content">
@@ -88,15 +87,15 @@
                                                 <span class="mini-click-non">BitMEX</span>
                                             </a>
                                             <ul class="submenu-angle collapse" id="sub_list" aria-expanded="false" style="height: 0px;">
-                                                <li><a title="Dashboard v.1" href=""><i class="fa fa-arrow-up"></i><span class="mini-sub-pro">XBTUSD 9368.5 -1.28% ...</span></a></li>
-                                                <li><a title="Dashboard v.2" href=""><i class="fa fa-arrow-down"></i><span class="mini-sub-pro">ETHUSD <sapn class="positive_num">230.85 0.43</sapn> ...</span></a></li>
-                                                <li><a title="Dashboard v.3" href=""><i class="fa fa-arrow-down"></i><sapn class="mini-sub-pro">XRPUSD <sapn class="positive_num">1891 2.28%</sapn> ...</span></a></li>
-                                                <li><a title="Product List" href=""><i class="fa fa-arrow-up"></i><span class="mini-sub-pro">TRXM20 <sapn class="positive_num">0.00000172</sapn> <span class="negative_num">-0.41%</span>...</span></a></li>
-                                                <li><a title="Product Edit" href=""><i class="fa fa-arrow-down"></i><span class="mini-sub-pro">XBTUSD <sapn class="positive_num">9368.5 5.56%</sapn> ...</span></a></li>
-                                                <li><a title="Product Detail" href=""><i class="fa fa-arrow-up"></i><span class="mini-sub-pro">XBTUSD <sapn class="positive_num">9368.5</sapn> <span class="negative_num">-10.22%</span>...</span></a></li>
-                                                <li><a title="Product Cart" href=""><i class="fa fa-arrow-up"></i><span class="mini-sub-pro">XBTUSD <sapn class="positive_num">9368.5</sapn> <span class="negative">-0.22%</span> ...</span></a></li>
-                                                <li><a title="Product Payment" href=""><i class="fa fa-arrow-up"></i><span class="mini-sub-pro">XBTUSD <sapn class="positive_num">9368.5 5.55%</sapn> ...</span></a></li>
-                                                <li><a title="Analytics" href=""><i class="fa fa-arrow-up"></i><span class="mini-sub-pro">XBTUSD <sapn class="positive_num">9368.5 2.23%</sapn> ...</span></a></li>
+                                                <li><a href=""><i class="fa fa-arrow-up"></i><span class="mini-sub-pro">XBTUSD 9368.5 -1.28% ...</span></a></li>
+                                                <li><a href=""><i class="fa fa-arrow-down"></i><span class="mini-sub-pro">ETHUSD <sapn class="positive_num">230.85 0.43</sapn> ...</span></a></li>
+                                                <li><a href=""><i class="fa fa-arrow-down"></i><sapn class="mini-sub-pro">XRPUSD <sapn class="positive_num">1891 2.28%</sapn> ...</span></a></li>
+                                                <li><a href=""><i class="fa fa-arrow-up"></i><span class="mini-sub-pro">TRXM20 <sapn class="positive_num">0.00000172</sapn> <span class="negative_num">-0.41%</span>...</span></a></li>
+                                                <li><a href=""><i class="fa fa-arrow-down"></i><span class="mini-sub-pro">XBTUSD <sapn class="positive_num">9368.5 5.56%</sapn> ...</span></a></li>
+                                                <li><a href=""><i class="fa fa-arrow-up"></i><span class="mini-sub-pro">XBTUSD <sapn class="positive_num">9368.5</sapn> <span class="negative_num">-10.22%</span>...</span></a></li>
+                                                <li><a href=""><i class="fa fa-arrow-up"></i><span class="mini-sub-pro">XBTUSD <sapn class="positive_num">9368.5</sapn> <span class="negative">-0.22%</span> ...</span></a></li>
+                                                <li><a href=""><i class="fa fa-arrow-up"></i><span class="mini-sub-pro">XBTUSD <sapn class="positive_num">9368.5 5.55%</sapn> ...</span></a></li>
+                                                <li><a href=""><i class="fa fa-arrow-up"></i><span class="mini-sub-pro">XBTUSD <sapn class="positive_num">9368.5 2.23%</sapn> ...</span></a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -104,10 +103,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="sidebar-header text-center wifi">
-                        <img src="../../../assets/img/scanner.gif" width="100" height="100"></img>
-                        <p>Market Scanner:<span class="online">ONLINE</span></p>
-                    </div> -->
                 </nav>
                 <div class="content_ctrl">
                     <p class="text-center"><h4 class="text-center">Control Panel</h4></p>
@@ -181,18 +176,29 @@
                                 <table class="table table-hover first_table">
                                     <thead class="table-bordered">
                                         <tr role="row">
-                                            <th>Date</th>
-                                            <th>Exchange</th>
-                                            <th>Pair</th>
-                                            <th>Side</th>
-                                            <th>Entry</th>
-                                            <th>Leverage</th>
-                                            <th>Stop Loss</th>
-                                            <th>uPnL</th>
+                                          <th></th>
+                                          <th>Date</th>
+                                          <th>Exchange</th>
+                                          <th>Pair</th>
+                                          <th>Side</th>
+                                          <th>Entry</th>
+                                          <th>Leverage</th>
+                                          <th>Stop Loss</th>
+                                          <th>uPnL</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="" checked>
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                        </td>
                                         <td>01-01-2020</td>
                                         <td>BitMEX</td>
                                         <td class="pair-color">XBTUSD</td>
@@ -201,8 +207,18 @@
                                         <td>10x</td>
                                         <td>10000</td>
                                         <td>.0010</td>
-                                    </tr>
-                                    <tr>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="" checked>
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                        </td>
                                         <td>01-01-2020</td>
                                         <td>BitMEX</td>
                                         <td class="pair-color">XBTUSD</td>
@@ -211,8 +227,18 @@
                                         <td>10x</td>
                                         <td>10000</td>
                                         <td>.0010</td>
-                                    </tr>
-                                    <tr>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="" checked>
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                        </td>
                                         <td>01-01-2020</td>
                                         <td>BitMEX</td>
                                         <td class="pair-color">XBTUSD</td>
@@ -221,8 +247,18 @@
                                         <td>10x</td>
                                         <td>10000</td>
                                         <td>.0010</td>
-                                    </tr>
-                                    <tr>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="" checked>
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                        </td>
                                         <td>01-01-2020</td>
                                         <td>BitMEX</td>
                                         <td class="pair-color">XBTUSD</td>
@@ -231,8 +267,18 @@
                                         <td>10x</td>
                                         <td>10000</td>
                                         <td>.0010</td>
-                                    </tr>
-                                    <tr>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="" checked>
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                        </td>
                                         <td>01-01-2020</td>
                                         <td>BitMEX</td>
                                         <td class="pair-color">XBTUSD</td>
@@ -241,8 +287,18 @@
                                         <td>10x</td>
                                         <td>10000</td>
                                         <td>.0010</td>
-                                    </tr>
-                                    <tr>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="" checked>
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                        </td>
                                         <td>01-01-2020</td>
                                         <td>BitMEX</td>
                                         <td class="pair-color">XBTUSD</td>
@@ -251,8 +307,18 @@
                                         <td>10x</td>
                                         <td>10000</td>
                                         <td>.0010</td>
-                                    </tr>
-                                    <tr>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="" checked>
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                        </td>
                                         <td>01-01-2020</td>
                                         <td>BitMEX</td>
                                         <td class="pair-color">XBTUSD</td>
@@ -261,8 +327,18 @@
                                         <td>10x</td>
                                         <td>10000</td>
                                         <td>.0010</td>
-                                    </tr>
-                                    <tr>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="" checked>
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                        </td>
                                         <td>01-01-2020</td>
                                         <td>BitMEX</td>
                                         <td class="pair-color">XBTUSD</td>
@@ -271,7 +347,127 @@
                                         <td>10x</td>
                                         <td>10000</td>
                                         <td>.0010</td>
-                                    </tr>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="" checked>
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                        </td>
+                                        <td>01-01-2020</td>
+                                        <td>BitMEX</td>
+                                        <td class="pair-color">XBTUSD</td>
+                                        <td class="short-color">SHORT</td>
+                                        <td>9900</td>
+                                        <td>10x</td>
+                                        <td>10000</td>
+                                        <td>.0010</td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="" checked>
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                        </td>
+                                        <td>01-01-2020</td>
+                                        <td>BitMEX</td>
+                                        <td class="pair-color">XBTUSD</td>
+                                        <td class="short-color">SHORT</td>
+                                        <td>9900</td>
+                                        <td>10x</td>
+                                        <td>10000</td>
+                                        <td>.0010</td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="" checked>
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                        </td>
+                                        <td>01-01-2020</td>
+                                        <td>BitMEX</td>
+                                        <td class="pair-color">XBTUSD</td>
+                                        <td class="short-color">SHORT</td>
+                                        <td>9900</td>
+                                        <td>10x</td>
+                                        <td>10000</td>
+                                        <td>.0010</td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="" checked>
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                        </td>
+                                        <td>01-01-2020</td>
+                                        <td>BitMEX</td>
+                                        <td class="pair-color">XBTUSD</td>
+                                        <td class="short-color">SHORT</td>
+                                        <td>9900</td>
+                                        <td>10x</td>
+                                        <td>10000</td>
+                                        <td>.0010</td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="" checked>
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                        </td>
+                                        <td>01-01-2020</td>
+                                        <td>BitMEX</td>
+                                        <td class="pair-color">XBTUSD</td>
+                                        <td class="short-color">SHORT</td>
+                                        <td>9900</td>
+                                        <td>10x</td>
+                                        <td>10000</td>
+                                        <td>.0010</td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" value="" checked>
+                                              <span class="form-check-sign">
+                                                <span class="check"></span>
+                                              </span>
+                                            </label>
+                                          </div>
+                                        </td>
+                                        <td>01-01-2020</td>
+                                        <td>BitMEX</td>
+                                        <td class="pair-color">XBTUSD</td>
+                                        <td class="short-color">SHORT</td>
+                                        <td>9900</td>
+                                        <td>10x</td>
+                                        <td>10000</td>
+                                        <td>.0010</td>
+                                      </tr>
                                     </tbody>
                                 </table>
                             </div>

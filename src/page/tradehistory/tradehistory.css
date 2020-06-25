@@ -1,9 +1,9 @@
 .main-panel .content {
-  margin-top: 0px;
+  margin-top: 10px;
 }
 .main-panel .content .card {
   margin-top: 10px;
-  height: 620px;
+  height: 810px;
   overflow: scroll;
 }
 .card-header {

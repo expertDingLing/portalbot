@@ -23,6 +23,10 @@ h3 {
     margin-top: -40px;
 }
 .card {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#bitcoin-dominance, #market-cap {
+    padding-top: 17px;
+    padding-bottom: 16px;
 }

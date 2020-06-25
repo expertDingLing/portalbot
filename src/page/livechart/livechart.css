@@ -1,5 +1,5 @@
 .main-panel .content {
-  margin-top: -10px;
+  margin-top: -20px;
 }
 .card .nav li {
   height:30px;
@@ -157,4 +157,7 @@
   .table {
     width: 100%;
   }
+}
+.submenu-angle a {
+  border-bottom: 1px solid grey;
 }
